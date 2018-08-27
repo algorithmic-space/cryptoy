@@ -1,2 +1,4 @@
-# Cryp_toy_
-Playing with cryptography
+# CrypToy
+_Playing with cryptography..._
+
+----
