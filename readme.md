@@ -2,9 +2,8 @@
 _Playing with cryptography..._
 
 ----
-[Jupyter Notebook (Python) RFC1321](https://nbviewer.jupyter.org/github/lordloh/cryptoy/blob/master/MD5.ipynb), MD5 Algorithm
-
-[Jupyter Notebook (Python) RFC1320](https://nbviewer.jupyter.org/github/lordloh/cryptoy/blob/master/MD4.ipynb), MD4 Algorithm
+* [Jupyter Notebook (Python) RFC1321](https://nbviewer.jupyter.org/github/lordloh/cryptoy/blob/master/MD5.ipynb), MD5 Algorithm
+* [Jupyter Notebook (Python) RFC1320](https://nbviewer.jupyter.org/github/lordloh/cryptoy/blob/master/MD4.ipynb), MD4 Algorithm
 
 
 ### See also...
