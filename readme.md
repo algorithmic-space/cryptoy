@@ -9,3 +9,4 @@ Here are implementation of certain RFCs pertaining to generating One Time Passwo
 
 **Implementation of various Cryptogrampic Algorithms as Jupyter Notebook [[Github](https://github.com/lordloh/cryptoy)]**
 * [Jupyter Notebook (Python) MD5](https://nbviewer.jupyter.org/github/lordloh/cryptoy/blob/master/MD5.ipynb), implementing RFC-1321.
+* [Jupyter Notebook (Python) MD4](https://nbviewer.jupyter.org/github/lordloh/cryptoy/blob/master/MD4.ipynb), implementing RFC-1320.
