@@ -1,0 +1,41 @@
+import hashlib
+import hmac
+
+def my_hmac(message, key):
+    # Implements the RFC 2104
+    B = 64
+    i_message = int.from_bytes(str.encode(message), byteorder = 'big')
+    i_key = int.from_bytes(str.encode(key), byteorder = 'big')
+    if len(key)>B:
+        raise ValueError('Key length > ' + str(B))
+    i_ipad = int.from_bytes(b'6'*B, byteorder = 'big')     # 0x36
+    i_opad = int.from_bytes(b'\\'*B, byteorder = 'big')    # 0x5C
+    
+    H = hashlib.new('sha1')
+    K_XOR_IPAD = i_key ^ i_ipad
+    K_XOR_OPAD = i_key ^ i_opad
+    step1 = (K_XOR_IPAD<<8*len(message)|i_message) # K XOR IPAD + MESSAGE
+    print("key          :" + hex(i_key))
+    print("message      :" + hex(i_message))
+    print("ipad         :" + hex(i_ipad))
+    print("opad         :" + hex(i_opad))
+    print("Key XOR iPAD :" + hex(K_XOR_IPAD))
+    print("Key XOR iPAD + M:\n              " + hex(K_XOR_IPAD))
+    H.update(step1.to_bytes(B+len(message), byteorder='big'))
+    hash_step1 = H.digest()
+    i_hash_step1 = int.from_bytes(hash_step1, byteorder='big')
+    print("HASH(step1)  :" + hex(i_hash_step1))
+    print("hexdigest    :" + H.hexdigest())
+    print("Key XOR oPAD :" + hex(K_XOR_OPAD))
+    step2 = (K_XOR_OPAD<<8*len(hash_step1)|i_hash_step1) # K XOR OPAD + HASH(STEP1)
+    print("Key XOR oPAD + HASH(step1):\n              " + hex(step2))
+    H.update(step2.to_bytes(B+len(hash_step1),byteorder='big'))
+    hex_out = H.hexdigest()
+    print("HASH(step2) : " + hex_out)
+    return hex_out
+    
+if __name__ == "__main__":
+    my_digest=my_hmac("hello","key")
+    print('my HMAC implementation     : '+my_digest)
+    HM = hmac.new(str.encode('key'),str.encode('hello'),"sha1")
+    print('Python HMAC implementation : '+HM.hexdigest())
