@@ -2,6 +2,7 @@
 _Playing with cryptography..._
 
 ----
+* [Jupyter Notebook (Python) SHA2-512](https://nbviewer.jupyter.org/github/algorithmic-space/cryptoy/blob/master/SHA2-512.ipynb), SHA2-512  Algorithm
 * [Jupyter Notebook (Python) SHA2-256](https://nbviewer.jupyter.org/github/algorithmic-space/cryptoy/blob/master/SHA2-256.ipynb), SHA2-256  Algorithm
 * [Jupyter Notebook (Python) SHA1](https://nbviewer.jupyter.org/github/algorithmic-space/cryptoy/blob/master/SHA1.ipynb), SHA1  Algorithm
 * [Jupyter Notebook (Python) RIPEMD-160](https://nbviewer.jupyter.org/github/algorithmic-space/cryptoy/blob/master/RIPEMD-160.ipynb), RIPEMD-160  Algorithm
