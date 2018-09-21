@@ -1,7 +1,7 @@
 # Algorithms Documents
 
 ### Key Derivation functions
-* **PKBDF2** - [RFC-2898](rfc2898.txt), [NIST 800-132](NISTSpecialPublication_800-132.pdf) [[Test Vectors](rfc3070.txt)]
+* **PKBDF2** - [RFC-2898](rfc2898.txt), [NIST 800-132](NISTSpecialPublication_800-132.pdf) [[Test Vectors](rfc6070.txt)]
 
 ### Hashing Algorithms
 * **MD4** - [RFC-1320](rfc1320.txt)
